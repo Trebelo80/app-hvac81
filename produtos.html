@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos - HVACSolution81</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #eef6ff; margin: 0; padding: 0; }
+        .cabecalho { background-color: #003366; color: white; padding: 20px; text-align: center; font-size: 28px; }
+        .produto { background-color: white; margin: 20px auto; padding: 20px; width: 80%; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .produto h3 { margin-top: 0; color: #003366; }
+        .produto p { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="cabecalho">Produtos HVAC</div>
+
+    <div class="produto">
+        <h3>Ar Condicionado Split</h3>
+        <p>Alta eficiência energética, ideal para residências e escritórios.</p>
+    </div>
+
+    <div class="produto">
+        <h3>Ventiladores Industriais</h3>
+        <p>Projetados para grandes espaços com alto desempenho de ventilação.</p>
+    </div>
+<ul>
+  {% for p in produtos %}
+    <li>{{ p.nome }} - {{ p.categoria }} - €{{ p.preco }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
